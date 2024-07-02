@@ -1,0 +1,66 @@
+ When to USE var,let, or const?
+1. Always declare variables 
+2. Always use const if the value should not be changed. 
+3. Always use const if the type should not be changed (Array and Objects)
+4. Only use let if you can't use const
+5. Only use var if you MUST support old browsers.
+
+
+==============================================
+============================================
+
+JavaScript Identifiers
+
+All JavaScript variables must be identified with unique names. 
+
+These unique names are called identifiers. 
+
+Identifiers can be short names(like x and y) or more descriptive names(age,sum,totalVolume).
+
+The General rules for constructing names for variables(unique identifiers)are: 
+
+-> Name can contain letters, digits, underscores,and dollar signs. 
+-> Names must begin with a letter 
+-> Names can also begin with $ and _
+-> Names are case sensitive(y and Y are different variables).
+-> Reserved words (like JavaScript keywords) cannot be used as names.
+
+ Note:
+ JavaScript identifiers are case-sensitive 
+ 
+==========================================
+==============================================
+ Difference Between var, let and const
+      |  Scope	|  Redeclare	|  Reassign	 | Hoisted |	Binds this
+var	  |   No	 |     Yes	     |  Yes	      |  Yes	|     Yes
+let	   |  Yes	  |     No	      |  Yes	   |  No	 |    No
+const  |    Yes	   |    No	       |  No	    | No  	  |   No
+
+====================================================================
+========================================
+
+
+What is Good?
+
+let and const have block scope.
+
+let and const can not be redeclared.
+
+let and const must be declared before use.
+
+let and const does not bind to this.
+
+let and const are not hoisted.
+
+What is Not Good?
+var does not have to be declared.
+
+var is hoisted.
+
+var binds to this.
+
+Browser Support
+The let and const keywords are not supported in Internet Explorer 11 or earlier.
+
+===============================================================
+=================================================================
