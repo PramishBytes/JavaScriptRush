@@ -1,0 +1,33 @@
+Invoking a Function with a Function Constructor 
+
+If a function invocation is preceded with the new keyword, it is a constructor invocaion.
+
+It looks like you create a new function, but since JavaScript function are objects you actually create a new object: 
+
+//Example
+
+// This is a function constructor: 
+
+function myFunction(arg1,arg2){
+
+    this.firstName = arg1; 
+    this.lastName = arg2;
+}
+
+// This creates a new object 
+const myObj = new myFunction("John","Doe");
+
+//This will return "John"
+
+myObj.firstName;
+
+
+A constructor invocation creates a new object. The new object inherits the properties and methods from its constructor. 
+
+
+Note: 
+
+The this keyword in the constructor does not have a value 
+
+The value of this will be the new object created when the function is invoked.
+

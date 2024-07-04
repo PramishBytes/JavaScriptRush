@@ -1,0 +1,68 @@
+The Difference Between call() and apply()
+
+The difference is : 
+
+The call() method takes arguments separately
+
+The apply() method takes arguments as an array
+
+==> Note: The apply() method is vary handy if you want to use an array instead of an argument list.
+
+
+//==================================================
+//==================================================
+The apply() method with arguments 
+
+The apply method accepts arguments in an array: 
+
+Example: 
+
+const person = {
+     
+     fullName: function(city,counry){
+
+        return this.firstName+" "+this.lastName+","+city+","+country;
+     }  
+}
+const person1 = {
+    firstName: " Pramish",
+    lastName: " Adhikari"
+}
+
+console.log(person.fullName.apply(person1, ["Pokhara","Nepal"]));
+
+//================================================================
+//================================================================
+
+Compared wit the call() method
+
+const person = {
+    fullName:function(city,country){
+        return this.firstName+" "+this.lastName+" ,"+city+","+country;
+    }
+}
+const person1={
+    firstName:" Pramish",
+    lastName:" Adhikari"
+}
+console.log(person.fullName.call(person1,"Pokhara","Nepal"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

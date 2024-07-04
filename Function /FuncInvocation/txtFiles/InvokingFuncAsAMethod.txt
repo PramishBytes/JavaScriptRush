@@ -1,0 +1,38 @@
+Invoking a function as a method
+
+In JavaScript, you can define functions as object methods. 
+
+The following example creates an object(myObject),with two properties (firsName and lastName), and a method (fullName)
+
+Example: 
+
+const myObject ={
+    firstName:"PRAMISH",
+    lastName:"Adhikari",
+    fullName: function(){
+        return this.firstName + " " +this.lastName;
+    }
+}
+myObject.fullName(); //will return PRAMISH Adhikari
+
+
+=> The fullName method is a function. The function belongs to the object. myObject is the owner of the function.
+
+This things called this, is the object that "owns" the JavaScript code. In this case the value of this is myObject.
+
+Test it! Change the fullName method to return the value of this: 
+
+//Example: 
+
+const myObject ={
+  
+  firstName: "Pramish",
+  lastName: "Adhikari",
+  fullName: function(){
+    return this;
+  }
+
+}
+//This will return [object Object](the owner object)
+
+myObject.fullName();
