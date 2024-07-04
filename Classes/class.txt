@@ -1,0 +1,26 @@
+JavaScript Class Syntax
+
+Use the keyword class to create a class. 
+
+Always add a method named constructor():
+
+Syntax: 
+class ClassName{
+    constructor(){
+        .....//block of code
+    }
+}
+
+Example: 
+const car{
+    constructor(name,year){
+        this.name = name; 
+        this.year = year;
+    }
+}
+
+The example above creates a class named 'Car'.
+
+The class has two initial properties: 'name' and 'year'.
+
+
